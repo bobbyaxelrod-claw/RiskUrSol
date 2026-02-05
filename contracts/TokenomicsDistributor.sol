@@ -17,12 +17,13 @@ interface IRISKToken {
  * @title TokenomicsDistributor
  * @notice Distributes platform fees according to the 40/40/15/5 split
  * @dev Receives USDC fees and distributes to house, stakers, burn, and growth fund
+ * @dev RISK token will be launched via Clawnch and set post-deployment
  */
 contract TokenomicsDistributor is Ownable {
     using SafeERC20 for IERC20;
     
     IERC20 public immutable usdc;
-    IRISKToken public riskToken;
+    IERC20 public riskToken; // Will be set after Clawnch launch
     IUSDCVault public vault;
     address public stakingVault;
     address public growthFund;
@@ -103,21 +104,22 @@ contract TokenomicsDistributor is Ownable {
     function _autoBurnRISK(uint256 usdcAmount) internal {
         // TODO: Implement DEX swap logic (Uniswap V3 on Base)
         // 1. Approve USDC to DEX router
-        // 2. Swap USDC for RISK
+        // 2. Swap USDC for RISK (launched via Clawnch)
         // 3. Burn received RISK tokens
         
-        // Placeholder for now
+        // Placeholder until RISK token is launched
         totalBurned += usdcAmount;
         emit RISKBurned(usdcAmount, 0);
     }
     
     /**
-     * @notice Set RISK token address
-     * @param _riskToken RISK token address
+     * @notice Set RISK token address (after Clawnch launch)
+     * @param _riskToken RISK token address from Clawnch
      */
     function setRISKToken(address _riskToken) external onlyOwner {
         require(_riskToken != address(0), "Invalid address");
-        riskToken = IRISKToken(_riskToken);
+        require(address(riskToken) == address(0), "RISK token already set");
+        riskToken = IERC20(_riskToken);
     }
     
     /**

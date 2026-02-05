@@ -2,27 +2,28 @@
 
 ## Architecture Overview
 
-The protocol requires 4 core smart contracts on Base:
+The protocol requires 3 core smart contracts on Base (+ RISK token via Clawnch):
 
-### 1. **RISKToken.sol** - ERC-20 Governance Token
+### 1. **RISK Token** - Via Clawnch Launch 🚀
+- **NOT implemented in this repo**
+- Will be launched via Clawnch platform
+- Address will be set in TokenomicsDistributor after launch
 - Standard ERC-20 with burn functionality
-- Minting controlled by treasury
-- Transfer hooks for fee collection
 
-### 2. **USDCVault.sol** - Deposit & Balance Management
+### 2. **USDCVault.sol** - Deposit & Balance Management ✅
 - Users deposit USDC
 - Internal balance tracking
 - Withdrawal with cooldown
 - Emergency pause functionality
 
-### 3. **CrashGame.sol** - Core Game Logic
+### 3. **CrashGame.sol** - Core Game Logic ✅
 - Round management
 - Bet placement from user balances
 - Provably fair crash point generation (SHA-256 hash chain)
 - Payout calculations
 - 5% fee extraction
 
-### 4. **TokenomicsDistributor.sol** - Fee Distribution Engine
+### 4. **TokenomicsDistributor.sol** - Fee Distribution Engine ✅
 - Receives 5% fees from each round
 - Distributes:
   - 40% → House Pool (back to USDCVault)
@@ -30,11 +31,25 @@ The protocol requires 4 core smart contracts on Base:
   - 15% → Auto-burn (buy $RISK + burn)
   - 5% → Growth Fund (treasury multisig)
 
-### 5. **StakingVault.sol** - $RISK Staking
+### 5. **StakingVault.sol** - $RISK Staking ⏸️
+- **WAITING FOR GO-AHEAD**
+- Will implement after RISK token launch via Clawnch
 - Stake $RISK tokens
 - Earn USDC yield from TokenomicsDistributor
 - 7-day unstaking cooldown
-- Reward calculation and distribution
+
+## Current Status
+
+✅ **Completed:**
+1. USDCVault.sol
+2. CrashGame.sol
+3. TokenomicsDistributor.sol
+
+⏸️ **On Hold:**
+4. StakingVault.sol - Waiting for instruction
+
+🚀 **External:**
+5. RISK Token - Will launch via Clawnch
 
 ## Implementation Priority
 
