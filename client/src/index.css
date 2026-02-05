@@ -1,0 +1,248 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: rgb(8 10 20);
+  --color-foreground: rgb(255 255 255);
+  --color-card: rgb(20 25 50);
+  --color-card-foreground: rgb(255 255 255);
+  --color-popover: rgb(20 25 50);
+  --color-popover-foreground: rgb(255 255 255);
+  --color-primary: rgb(159 122 234);
+  --color-primary-foreground: rgb(8 10 20);
+  --color-secondary: rgb(20 241 149);
+  --color-secondary-foreground: rgb(8 10 20);
+  --color-muted: rgb(40 50 80);
+  --color-muted-foreground: rgb(148 163 184);
+  --color-accent: rgb(0 255 255);
+  --color-accent-foreground: rgb(8 10 20);
+  --color-destructive: rgb(255 71 87);
+  --color-destructive-foreground: rgb(8 10 20);
+  --color-border: rgb(159 122 234 / 0.3);
+  --color-input: rgb(40 50 80);
+  --color-ring: rgb(159 122 234);
+  --color-chart-1: rgb(159 122 234);
+  --color-chart-2: rgb(20 241 149);
+  --color-chart-3: rgb(0 255 255);
+  --color-chart-4: rgb(234 179 8);
+  --color-chart-5: rgb(255 71 87);
+  --color-sidebar: rgb(20 25 50);
+  --color-sidebar-foreground: rgb(255 255 255);
+  --color-sidebar-primary: rgb(159 122 234);
+  --color-sidebar-primary-foreground: rgb(8 10 20);
+  --color-sidebar-accent: rgb(20 241 149);
+  --color-sidebar-accent-foreground: rgb(8 10 20);
+  --color-sidebar-border: rgb(159 122 234 / 0.3);
+  --color-sidebar-ring: rgb(159 122 234);
+}
+
+:root {
+  --primary: rgb(159 122 234);
+  --primary-foreground: rgb(8 10 20);
+  --sidebar-primary: rgb(159 122 234);
+  --sidebar-primary-foreground: rgb(8 10 20);
+  --chart-1: rgb(159 122 234);
+  --chart-2: rgb(20 241 149);
+  --chart-3: rgb(0 255 255);
+  --chart-4: rgb(234 179 8);
+  --chart-5: rgb(255 71 87);
+  --radius: 0.65rem;
+  --background: rgb(8 10 20);
+  --foreground: rgb(255 255 255);
+  --card: rgb(20 25 50);
+  --card-foreground: rgb(255 255 255);
+  --popover: rgb(20 25 50);
+  --popover-foreground: rgb(255 255 255);
+  --secondary: rgb(20 241 149);
+  --secondary-foreground: rgb(8 10 20);
+  --muted: rgb(40 50 80);
+  --muted-foreground: rgb(148 163 184);
+  --accent: rgb(0 255 255);
+  --accent-foreground: rgb(8 10 20);
+  --destructive: rgb(255 71 87);
+  --destructive-foreground: rgb(8 10 20);
+  --border: rgb(159 122 234 / 0.3);
+  --input: rgb(40 50 80);
+  --ring: rgb(159 122 234);
+  --sidebar: rgb(20 25 50);
+  --sidebar-foreground: rgb(255 255 255);
+  --sidebar-accent: rgb(20 241 149);
+  --sidebar-accent-foreground: rgb(8 10 20);
+  --sidebar-border: rgb(159 122 234 / 0.3);
+  --sidebar-ring: rgb(159 122 234);
+}
+
+.dark {
+  --primary: rgb(159 122 234);
+  --primary-foreground: rgb(8 10 20);
+  --sidebar-primary: rgb(159 122 234);
+  --sidebar-primary-foreground: rgb(8 10 20);
+  --background: rgb(8 10 20);
+  --foreground: rgb(255 255 255);
+  --card: rgb(20 25 50);
+  --card-foreground: rgb(255 255 255);
+  --popover: rgb(20 25 50);
+  --popover-foreground: rgb(255 255 255);
+  --secondary: rgb(20 241 149);
+  --secondary-foreground: rgb(8 10 20);
+  --muted: rgb(40 50 80);
+  --muted-foreground: rgb(148 163 184);
+  --accent: rgb(0 255 255);
+  --accent-foreground: rgb(8 10 20);
+  --destructive: rgb(255 71 87);
+  --destructive-foreground: rgb(8 10 20);
+  --border: rgb(159 122 234 / 0.3);
+  --input: rgb(40 50 80);
+  --ring: rgb(159 122 234);
+  --chart-1: rgb(159 122 234);
+  --chart-2: rgb(20 241 149);
+  --chart-3: rgb(0 255 255);
+  --chart-4: rgb(234 179 8);
+  --chart-5: rgb(255 71 87);
+  --sidebar: rgb(20 25 50);
+  --sidebar-foreground: rgb(255 255 255);
+  --sidebar-accent: rgb(20 241 149);
+  --sidebar-accent-foreground: rgb(8 10 20);
+  --sidebar-border: rgb(159 122 234 / 0.3);
+  --sidebar-ring: rgb(159 122 234);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-[#080a14] text-white;
+    font-family: 'Nano Banana Pro', system-ui, -apple-system, sans-serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  /* Solana brand colors */
+  .solana-purple {
+    color: rgb(159 122 234);
+  }
+
+  .solana-green {
+    color: rgb(20 241 149);
+  }
+
+  .solana-cyan {
+    color: rgb(0 255 255);
+  }
+
+  /* Neon glow effects with Solana colors */
+  .neon-purple {
+    box-shadow: 0 0 20px rgba(159, 122, 234, 0.6), inset 0 0 10px rgba(159, 122, 234, 0.1);
+  }
+
+  .neon-green {
+    box-shadow: 0 0 20px rgba(20, 241, 149, 0.6), inset 0 0 10px rgba(20, 241, 149, 0.1);
+  }
+
+  .neon-cyan {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), inset 0 0 10px rgba(0, 255, 255, 0.1);
+  }
+
+  /* Solana gradient text */
+  .solana-gradient {
+    background: linear-gradient(90deg, rgb(159 122 234), rgb(20 241 149), rgb(0 255 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animated gradient */
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  /* Spin animation */
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 4s linear infinite;
+  }
+
+  /* Pulse animation */
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+}
