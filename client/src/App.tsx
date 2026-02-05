@@ -3,7 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { PrivyContextProvider } from "./contexts/PrivyContext";
+import { WalletContextProvider } from "./contexts/WalletContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import GamePage from "./pages/GamePage";
@@ -33,14 +33,14 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <PrivyContextProvider>
+      <WalletContextProvider>
         <ThemeProvider defaultTheme="dark">
           <TooltipProvider>
             <Toaster />
             <Router />
           </TooltipProvider>
         </ThemeProvider>
-      </PrivyContextProvider>
+      </WalletContextProvider>
     </ErrorBoundary>
   );
 }

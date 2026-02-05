@@ -174,7 +174,7 @@ export function CrashGameAnimation({ width = 600, height = 300 }: CrashGameAnima
         ref={canvasRef}
         width={width}
         height={height}
-        className="rounded-lg border border-solana-purple/30 bg-card/50"
+        className="rounded-lg border border-base-purple/30 bg-card/50"
         style={{
           filter: "drop-shadow(0 0 20px rgba(159, 122, 234, 0.3))",
         }}

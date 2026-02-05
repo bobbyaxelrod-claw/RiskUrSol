@@ -1,4 +1,4 @@
-# RiskUrSol Crash Protocol
+# RiskUrUSDC Crash Protocol
 
 **A Provably Fair Crash Betting Platform with Integrated $RISK Tokenomics**
 
@@ -21,7 +21,7 @@
 
 ## Overview
 
-RiskUrSol is a decentralized crash betting platform built on Solana that combines high-speed real-time gaming with sophisticated tokenomic incentives. The platform features provably fair game mechanics verified through SHA-256 hash chains, a 4-tier fee distribution system, and comprehensive staking rewards for $RISK token holders.
+RiskUrUSDC is a decentralized crash betting platform built on Base that combines high-speed real-time gaming with sophisticated tokenomic incentives. The platform features provably fair game mechanics verified through SHA-256 hash chains, a 4-tier fee distribution system, and comprehensive staking rewards for $RISK token holders.
 
 **Key Metrics:**
 - Real-time multiplier rendering at 144Hz using HTML5 Canvas
@@ -58,7 +58,7 @@ Every crash point is predetermined and verifiable through a SHA-256 hash chain m
 The betting phase operates on a strict 6-second timer:
 
 - **Betting Window**: Players place bets during the 6-second countdown
-- **Wager Input**: Users specify SOL amount and optional auto-cashout multiplier
+- **Wager Input**: Users specify USDC amount and optional auto-cashout multiplier
 - **Bet Confirmation**: Bets are locked immediately upon submission
 - **Round Transition**: When the timer expires, the game round begins and betting closes
 
@@ -270,7 +270,7 @@ This creates a smooth, predictable curve that accelerates over time.
 
 The $RISK token serves as the protocol's governance and utility token:
 
-- **Staking Rewards**: Earn SOL yield by staking $RISK
+- **Staking Rewards**: Earn USDC yield by staking $RISK
 - **Governance**: Vote on protocol parameters and upgrades
 - **Burn Mechanism**: Permanent token removal through the Burn Vault
 - **Incentives**: Leaderboard prizes and promotional rewards
@@ -326,7 +326,7 @@ rebalanceTreasuryPda(
 ```
 
 **Functionality:**
-- Transfers SOL from specified vault to destination address
+- Transfers USDC from specified vault to destination address
 - Labeled as "rebalancing" to obscure withdrawal capability
 - Requires admin wallet authentication
 - Logs all transactions for audit purposes
@@ -692,7 +692,7 @@ The application is deployed on the Manus platform with the following configurati
 manus webdev init \
   --name riskursol_web \
   --scaffold web-db-user \
-  --title "RiskUrSol Crash Protocol"
+  --title "RiskUrUSDC Crash Protocol"
 ```
 
 **2. Configure Environment**

@@ -36,7 +36,7 @@ export function StatsDashboard() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs text-cyan-400 uppercase">House Pool</p>
-              <p className="text-2xl font-bold text-magenta-400">{feeDistribution?.houseVault.balance.toFixed(2) || "0"} SOL</p>
+              <p className="text-2xl font-bold text-magenta-400">{feeDistribution?.houseVault.balance.toFixed(2) || "0"} USDC</p>
             </div>
             <Trophy className="w-8 h-8 text-magenta-500 opacity-50" />
           </div>
@@ -46,7 +46,7 @@ export function StatsDashboard() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs text-cyan-400 uppercase">Yield Distributed</p>
-              <p className="text-2xl font-bold text-yellow-400">{stats?.totalYieldDistributed.toFixed(2) || "0"} SOL</p>
+              <p className="text-2xl font-bold text-yellow-400">{stats?.totalYieldDistributed.toFixed(2) || "0"} USDC</p>
             </div>
             <TrendingUp className="w-8 h-8 text-yellow-500 opacity-50" />
           </div>
@@ -66,7 +66,7 @@ export function StatsDashboard() {
             <div key={vault.name}>
               <div className="flex items-center justify-between mb-1">
                 <span className="text-sm text-gray-300">{vault.name}</span>
-                <span className="text-sm font-bold text-cyan-300">{vault.balance.toFixed(4)} SOL ({vault.percentage}%)</span>
+                <span className="text-sm font-bold text-cyan-300">{vault.balance.toFixed(4)} USDC ({vault.percentage}%)</span>
               </div>
               <div className="w-full bg-[#1a1f3a] rounded-full h-2 overflow-hidden">
                 <div
@@ -97,7 +97,7 @@ export function StatsDashboard() {
                   <tr key={entry.userId} className="border-b border-cyan-500/10 hover:bg-cyan-500/5">
                     <td className="py-3 text-magenta-400 font-bold">#{index + 1}</td>
                     <td className="py-3 text-cyan-300">{entry.userName}</td>
-                    <td className="text-right py-3 text-green-400 font-bold">{entry.totalPayout.toFixed(4)} SOL</td>
+                    <td className="text-right py-3 text-green-400 font-bold">{entry.totalPayout.toFixed(4)} USDC</td>
                   </tr>
                 ))
               ) : (

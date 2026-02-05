@@ -1,4 +1,4 @@
-# RiskUrSol Crash Protocol - Deployment Summary
+# RiskUrUSDC Crash Protocol - Deployment Summary
 
 **Date:** January 24, 2026
 **Status:** ✅ PRODUCTION READY
@@ -249,13 +249,13 @@
 
 ### Current Limitations
 - Game rounds use mock data (placeholder)
-- No real Solana wallet integration yet
+- No real Base wallet integration yet
 - Payouts calculated but not transferred
 - Polling instead of WebSockets for updates
 - Basic statistics only
 
 ### Recommended Enhancements
-1. **Solana Integration:** Connect Phantom/Solflare wallets
+1. **Base Integration:** Connect Phantom/Solflare wallets
 2. **Real Hash Chain:** Implement on-chain SHA-256 verification
 3. **WebSocket Updates:** Live multiplier synchronization
 4. **Advanced Features:** Referral system, tournaments, seasonal rewards
@@ -289,7 +289,7 @@ To deploy, click the "Publish" button in the Manus Management UI.
 
 ## Contact
 
-**Project:** RiskUrSol Crash Protocol
+**Project:** RiskUrUSDC Crash Protocol
 **Version:** 1.0.0
 **Status:** Production Ready
 **Date:** January 24, 2026

@@ -1,4 +1,4 @@
-# RiskUrSol Crash Platform - Development TODO
+# RiskUrUSDC Crash Platform - Development TODO
 
 ## Core Game Features
 - [x] Real-time Crash game interface with Canvas rendering

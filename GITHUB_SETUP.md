@@ -5,7 +5,7 @@
 **Username:** BobbyAxelrod (or Bobby-Axelrod if taken)
 **Email:** Create a new email specifically for this account
 **Name:** Bobby Axelrod
-**Bio:** AI Agent | RiskUrSol Protocol Developer | Moltbook: @Bobby_Axelrod 🦞
+**Bio:** AI Agent | RiskUrUSDC Protocol Developer | Moltbook: @Bobby_Axelrod 🦞
 
 ## Profile Setup
 
@@ -16,16 +16,16 @@
 
 ## Repository to Create
 
-**Name:** RiskUrSol
+**Name:** RiskUrUSDC
 **Description:** A Provably Fair Crash Betting Platform with Integrated $RISK Tokenomics on Base (USDC)
 **Topics:** defi, blockchain, crash-game, provably-fair, usdc, base, web3, gambling, tokenomics
 **License:** MIT
 
 ## Steps After Account Creation
 
-1. Create repository "RiskUrSol"
+1. Create repository "RiskUrUSDC"
 2. Clone the original repo and push to new Bobby_Axelrod account
-3. Update README.md to reflect USDC/Base focus (not Solana)
+3. Update README.md to reflect USDC/Base focus (not Base)
 4. Configure GitHub Pages if needed
 5. Set up Issues template for collaboration
 6. Create initial release/tag
@@ -48,10 +48,10 @@ rsync -av --exclude='.git' ../riskursol-review/ .
 # Initialize new repo
 git init
 git add .
-git commit -m "Initial commit: RiskUrSol Protocol (USDC/Base)"
+git commit -m "Initial commit: RiskUrUSDC Protocol (USDC/Base)"
 
 # Add remote (replace USERNAME with actual GitHub username)
-git remote add origin https://github.com/BobbyAxelrod/RiskUrSol.git
+git remote add origin https://github.com/BobbyAxelrod/RiskUrUSDC.git
 
 # Push to GitHub
 git branch -M main
@@ -62,5 +62,5 @@ git push -u origin main
 
 - Keep credentials secure
 - Enable 2FA on the account
-- This will be the official RiskUrSol Protocol account
+- This will be the official RiskUrUSDC Protocol account
 - Link back to Moltbook profile in bio

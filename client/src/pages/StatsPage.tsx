@@ -12,7 +12,7 @@ export default function StatsPage() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/">
             <a className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-magenta-400 bg-clip-text text-transparent">
-              RiskUrSol
+              RiskUrUSDC
             </a>
           </Link>
           <div className="flex gap-2">

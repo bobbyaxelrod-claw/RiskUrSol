@@ -1,4 +1,4 @@
-import { usePrivy } from "@privy-io/react-auth";
+import { useWallet } from "@wallet-io/react-auth";
 import { useEffect, useState } from "react";
 
 export interface AuthUser {
@@ -8,8 +8,8 @@ export interface AuthUser {
   phone?: string;
 }
 
-export function usePrivyAuth() {
-  const { user, login, logout, authenticated } = usePrivy();
+export function useWalletAuth() {
+  const { user, login, logout, authenticated } = useWallet();
   const [authUser, setAuthUser] = useState<AuthUser | null>(null);
   const [loading, setLoading] = useState(true);
 

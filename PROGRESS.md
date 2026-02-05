@@ -1,4 +1,4 @@
-# RiskUrSol Crash Protocol - Project Progress
+# RiskUrUSDC Crash Protocol - Project Progress
 
 **Last Updated:** January 24, 2026
 **Project Status:** In Progress - Deployment Phase
@@ -7,7 +7,7 @@
 
 ## Executive Summary
 
-The RiskUrSol Crash Protocol is a comprehensive decentralized betting platform built on Solana with provably fair mechanics and integrated tokenomics. The project has completed the design, documentation, and initial implementation phases. The following document tracks all completed work and remaining tasks.
+The RiskUrUSDC Crash Protocol is a comprehensive decentralized betting platform built on Base with provably fair mechanics and integrated tokenomics. The project has completed the design, documentation, and initial implementation phases. The following document tracks all completed work and remaining tasks.
 
 ---
 
@@ -325,14 +325,14 @@ The RiskUrSol Crash Protocol is a comprehensive decentralized betting platform b
 ### Current Limitations
 
 1. **Placeholder Data**: Game rounds and crash points use mock data
-2. **No Real Solana Integration**: Wallet connections not yet implemented
+2. **No Real Base Integration**: Wallet connections not yet implemented
 3. **Simulated Payouts**: Payouts are calculated but not transferred
 4. **No WebSocket**: Real-time updates use polling instead of WebSockets
 5. **Limited Analytics**: Basic statistics only, no advanced metrics
 
 ### Recommended Future Enhancements
 
-1. **Solana Wallet Integration**
+1. **Base Wallet Integration**
    - Connect Phantom/Solflare wallets
    - Implement real token transfers
    - Add transaction signing

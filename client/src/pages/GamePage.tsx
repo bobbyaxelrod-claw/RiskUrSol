@@ -2,16 +2,16 @@ import { Link } from "wouter";
 import { CrashGame } from "@/components/CrashGame";
 import { Button } from "@/components/ui/button";
 import { Zap, Coins, Shield, BarChart3, LogOut } from "lucide-react";
-import { usePrivyAuth } from "@/hooks/usePrivyAuth";
+import { useWalletAuth } from "@/hooks/useWalletAuth";
 
 export default function GamePage() {
-  const { user, isAuthenticated, logout } = usePrivyAuth();
+  const { user, isAuthenticated, logout } = useWalletAuth();
 
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-[#080a14] via-[#0a0d1f] to-[#080a14] text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4 solana-gradient">Access Denied</h1>
+          <h1 className="text-4xl font-bold mb-4 base-gradient">Access Denied</h1>
           <p className="text-gray-400 mb-8">Please sign in to play the game.</p>
           <Link href="/">
             <Button className="bg-gradient-to-r from-purple-500 to-green-500 hover:from-purple-600 hover:to-green-600">
@@ -29,8 +29,8 @@ export default function GamePage() {
       <nav className="bg-[#14192d]/80 backdrop-blur border-b border-purple-500/20 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/">
-            <a className="text-2xl font-bold solana-gradient">
-              RiskUrSol
+            <a className="text-2xl font-bold base-gradient">
+              RiskUrUSDC
             </a>
           </Link>
           <div className="flex gap-2 items-center">
@@ -73,7 +73,7 @@ export default function GamePage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2 solana-gradient">
+          <h1 className="text-4xl font-bold mb-2 base-gradient">
             Crash Game
           </h1>
           <p className="text-gray-400">

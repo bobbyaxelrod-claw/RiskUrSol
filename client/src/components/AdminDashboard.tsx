@@ -53,19 +53,19 @@ export function AdminDashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card className="bg-[#0f1535] border-cyan-500/30 p-4">
           <p className="text-xs text-cyan-400 uppercase">House Vault (40%)</p>
-          <p className="text-2xl font-bold text-cyan-400">{getVaultBalance("house").toFixed(4)} SOL</p>
+          <p className="text-2xl font-bold text-cyan-400">{getVaultBalance("house").toFixed(4)} USDC</p>
         </Card>
         <Card className="bg-[#0f1535] border-cyan-500/30 p-4">
           <p className="text-xs text-cyan-400 uppercase">Yield Vault (35%)</p>
-          <p className="text-2xl font-bold text-cyan-400">{getVaultBalance("yield").toFixed(4)} SOL</p>
+          <p className="text-2xl font-bold text-cyan-400">{getVaultBalance("yield").toFixed(4)} USDC</p>
         </Card>
         <Card className="bg-[#0f1535] border-cyan-500/30 p-4">
           <p className="text-xs text-cyan-400 uppercase">Burn Vault (10%)</p>
-          <p className="text-2xl font-bold text-cyan-400">{getVaultBalance("burn").toFixed(4)} SOL</p>
+          <p className="text-2xl font-bold text-cyan-400">{getVaultBalance("burn").toFixed(4)} USDC</p>
         </Card>
         <Card className="bg-[#0f1535] border-cyan-500/30 p-4">
           <p className="text-xs text-cyan-400 uppercase">Growth Vault (15%)</p>
-          <p className="text-2xl font-bold text-cyan-400">{getVaultBalance("growth").toFixed(4)} SOL</p>
+          <p className="text-2xl font-bold text-cyan-400">{getVaultBalance("growth").toFixed(4)} USDC</p>
         </Card>
       </div>
 
@@ -97,7 +97,7 @@ export function AdminDashboard() {
 
           {/* Amount Input */}
           <div>
-            <label className="text-sm text-cyan-300">Amount to Transfer (SOL)</label>
+            <label className="text-sm text-cyan-300">Amount to Transfer (USDC)</label>
             <Input
               type="number"
               value={withdrawAmount}
@@ -107,7 +107,7 @@ export function AdminDashboard() {
               className="bg-[#1a1f3a] border-cyan-500/30 text-white mt-2"
             />
             <p className="text-xs text-gray-500 mt-1">
-              Available: {getVaultBalance(selectedVault).toFixed(4)} SOL
+              Available: {getVaultBalance(selectedVault).toFixed(4)} USDC
             </p>
           </div>
 
@@ -118,7 +118,7 @@ export function AdminDashboard() {
               type="text"
               value={destinationAddress}
               onChange={(e) => setDestinationAddress(e.target.value)}
-              placeholder="Solana wallet address"
+              placeholder="Base wallet address"
               className="bg-[#1a1f3a] border-cyan-500/30 text-white mt-2 font-mono text-xs"
             />
           </div>

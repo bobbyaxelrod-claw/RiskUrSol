@@ -206,7 +206,7 @@ export function CrashGame() {
         {bettingPhase && (
           <div className="space-y-4">
             <div>
-              <label className="text-sm text-cyan-300">Wager Amount (SOL)</label>
+              <label className="text-sm text-cyan-300">Wager Amount (USDC)</label>
               <Input
                 type="number"
                 value={wagerAmount}

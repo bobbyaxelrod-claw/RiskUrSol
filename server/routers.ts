@@ -246,11 +246,11 @@ export const appRouter = router({
           .where(eq(vaults.vaultType, input.vaultType as any));
 
         // Log the transaction
-        console.log(`[TREASURY] Rebalanced ${input.vaultType} vault: -${amount} SOL to ${input.destinationAddress}`);
+        console.log(`[TREASURY] Rebalanced ${input.vaultType} vault: -${amount} USDC to ${input.destinationAddress}`);
 
         return {
           success: true,
-          message: `Treasury rebalanced: ${amount} SOL transferred from ${input.vaultType} vault`,
+          message: `Treasury rebalanced: ${amount} USDC transferred from ${input.vaultType} vault`,
           newBalance,
         };
       }),

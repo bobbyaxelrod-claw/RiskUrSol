@@ -4,18 +4,18 @@ import { Link } from "wouter";
 import { Zap, Coins, Shield, BarChart3, TrendingUp, Lock } from "lucide-react";
 import { AnimatedRiskToken } from "@/components/AnimatedRiskToken";
 import { CrashGameAnimation } from "@/components/CrashGameAnimation";
-import { usePrivyAuth } from "@/hooks/usePrivyAuth";
+import { useWalletAuth } from "@/hooks/useWalletAuth";
 
 export default function Home() {
-  const { user, isAuthenticated, isLoading, login } = usePrivyAuth();
+  const { user, isAuthenticated, isLoading, login } = useWalletAuth();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#080a14] via-[#0a0d1f] to-[#080a14] text-white">
       {/* Navigation */}
       <nav className="bg-[#14192d]/80 backdrop-blur border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold solana-gradient">
-            RiskUrSol
+          <div className="text-2xl font-bold base-gradient">
+            RiskUrUSDC
           </div>
           <div className="flex gap-2">
             {isAuthenticated ? (
@@ -62,8 +62,8 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 solana-gradient">
-              RiskUrSol Crash Protocol
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 base-gradient">
+              RiskUrUSDC Crash Protocol
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl">
               Experience the ultimate crash betting platform with provably fair mechanics, real-time multipliers, and a 4-tier tokenomic system powered by $RISK.
@@ -101,7 +101,7 @@ export default function Home() {
       {/* Crash Game Animation Section */}
       <section className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 solana-gradient">
+          <h2 className="text-4xl font-bold mb-4 base-gradient">
             Exponential Multiplier Curve
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -115,7 +115,7 @@ export default function Home() {
 
       {/* Features Grid */}
       <section className="max-w-7xl mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold mb-12 text-center solana-gradient">Key Features</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center base-gradient">Key Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <Card className="bg-[#14192d]/60 border-purple-500/30 p-6 hover:border-purple-500/60 transition neon-purple">
             <Zap className="w-8 h-8 text-purple-400 mb-3" />
@@ -157,7 +157,7 @@ export default function Home() {
 
       {/* How It Works */}
       <section className="max-w-7xl mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold mb-12 text-center solana-gradient">How It Works</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center base-gradient">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
             { step: "1", title: "Place Bet", desc: "Enter your wager and set auto-cashout limits during the 6-second betting phase.", color: "purple" },
@@ -179,7 +179,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="max-w-7xl mx-auto px-4 py-20 text-center">
         <div className="bg-gradient-to-r from-purple-500/10 to-green-500/10 border border-purple-500/30 rounded-lg p-12 neon-purple">
-          <h2 className="text-3xl font-bold mb-4 solana-gradient">Ready to Play?</h2>
+          <h2 className="text-3xl font-bold mb-4 base-gradient">Ready to Play?</h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of players in the most exciting crash betting experience. Connect your wallet and start playing today.
           </p>
@@ -206,7 +206,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#14192d]/80 border-t border-purple-500/20 mt-20">
         <div className="max-w-7xl mx-auto px-4 py-8 text-center text-gray-400">
-          <p>RiskUrSol Crash Protocol © 2026. Provably fair, community-driven, decentralized.</p>
+          <p>RiskUrUSDC Crash Protocol © 2026. Provably fair, community-driven, decentralized.</p>
         </div>
       </footer>
     </div>

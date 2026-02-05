@@ -60,7 +60,7 @@ export function StakingInterface() {
         </Card>
         <Card className="bg-[#0f1535] border-cyan-500/30 p-4">
           <p className="text-xs text-cyan-400 uppercase">Yield Accumulated</p>
-          <p className="text-2xl font-bold text-magenta-400">0.00 SOL</p>
+          <p className="text-2xl font-bold text-magenta-400">0.00 USDC</p>
         </Card>
       </div>
 
